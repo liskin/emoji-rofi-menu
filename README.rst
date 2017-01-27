@@ -3,6 +3,11 @@ Emoji Rofi Menu
 ===============
 This is a very simple script which uses Rofi to display a list of emoji and sends them via Xorg's keyboard input once selected.
 
+|menu|
+
+
+.. |menu| image:: http://i.imgur.com/qR62krBg.png
+
 
 Requirements
 ------------
