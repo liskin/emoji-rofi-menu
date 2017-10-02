@@ -2,7 +2,7 @@
 
 cd $(dirname $(readlink -f $0))
 
-line=$(cat emoji-data | rofi -dmenu)
+line=$(cat emoji-data | rofi -dmenu -i)
 if [ ! -z "$line" ]; then
     char=$(cut -f 1 -d' ' <<< "$line")
     xdotool key $(cut -f 2 <<< "$line")
