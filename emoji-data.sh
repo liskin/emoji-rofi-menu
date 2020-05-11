@@ -3,8 +3,8 @@
 set -eu
 
 curl -Ssf -L \
-	-O https://github.com/unicode-org/cldr/raw/release-35-1/common/annotations/en.xml \
-	-O https://github.com/unicode-org/cldr/raw/release-35-1/common/annotations/en_001.xml
+	-O https://github.com/unicode-org/cldr/raw/release-37/common/annotations/en.xml \
+	-O https://github.com/unicode-org/cldr/raw/release-37/common/annotations/en_001.xml
 
 jq_code='
 	def to_dict: {(."@cp"): {(if ."@type" == "tts" then "name" else "keywords" end): (."#text")}};
