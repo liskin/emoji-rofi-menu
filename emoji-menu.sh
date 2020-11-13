@@ -15,7 +15,14 @@ else
 	}
 fi
 
-read -r emoji desc < <(rofi-dmenu -i -p "emoji" -font "mono 20" -width 80 <emoji-data)
+# use 'emoji mono' alias if available
+if [[ "$(fc-match mono family)" != "$(fc-match 'emoji mono' family)" ]]; then
+	font='emoji mono'
+else
+	font='mono'
+fi
+
+read -r emoji desc < <(rofi-dmenu -i -p "emoji" -font "$font 20" -width 80 <emoji-data)
 [[ $emoji && $desc ]]
 
 # wait for focus to return back from rofi
