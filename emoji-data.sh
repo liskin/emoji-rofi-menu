@@ -2,7 +2,7 @@
 
 set -eu
 
-tag="release-38-beta"
+tag="release-39"
 
 curl -Ssf -L \
 	-o en1.xml https://github.com/unicode-org/cldr/raw/"$tag"/common/annotations/en.xml \
