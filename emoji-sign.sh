@@ -15,10 +15,10 @@ else
 	}
 fi
 
-read -r emoji desc < <(rofi-dmenu -i -p "emoji" -font "${EMOJI_FONT:-mono} 20" -width 80 <emoji-data)
+read -r emoji desc < <(rofi-dmenu -i -p "emoji" -font "${EMOJI_FONT:-mono} 20" -theme-str 'window {width: 80%;}' <emoji-data)
 [[ $emoji && $desc ]]
 
 # wait for focus to return back from rofi
 sleep 0.2
 
-rofi -font "${EMOJI_FONT:-mono} 666" -width -2 -location 2 -e "$emoji"
+rofi -font "${EMOJI_FONT:-mono} 666" -theme-str 'window {width: 1.1em;}' -location 2 -e "$emoji"
